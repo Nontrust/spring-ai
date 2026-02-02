@@ -1,0 +1,13 @@
+package com.ai.spring.springai;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class SpringAiApplicationTests {
+
+    @Test
+    void contextLoads() {
+    }
+
+}
