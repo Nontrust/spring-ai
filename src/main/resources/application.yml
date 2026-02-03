@@ -18,4 +18,4 @@ app:
       prompt:
         v1:
           ko:
-            system-default: "classpath:prompt/system/system.ko.v1.md"
+            system-default-path: "classpath:/prompt/system/system.ko.v1.md"

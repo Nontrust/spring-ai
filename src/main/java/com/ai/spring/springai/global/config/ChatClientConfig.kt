@@ -20,8 +20,7 @@ class ChatClientConfig(
      */
     @Bean
     fun chatClient(chatClientBuilder: ChatClient.Builder): ChatClient =
-        promptLoader.load(props.v1.ko.systemDefault)
-            .let(promptLoader::load)
+        promptLoader.load(props.v1.ko.systemDefaultPath)
             .let(chatClientBuilder::defaultSystem)
             .build()
 }

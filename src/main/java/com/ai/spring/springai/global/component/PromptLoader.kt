@@ -5,7 +5,9 @@ import org.springframework.stereotype.Component
 
 @Component
 class PromptLoader(private val resourceLoader: ResourceLoader) {
-    fun load(path: String):String =
-        resourceLoader.getResource(path).inputStream.bufferedReader().use { it.readText() }
+    fun load(path: String): String =
+        resourceLoader.getResource(path)
+            .inputStream.bufferedReader()
+            .use { it.readText() }
 
 }
