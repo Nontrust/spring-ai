@@ -1,13 +1,21 @@
- spring:
+spring:
   application:
     name: spring-ai
+
   ai:
     openai:
       api-key: ${OPENAI_API_KEY}
-#      anthropic: ${OPENAI_API_KEY}
-#      google: ${ANTHROPIC_API_KEY}
       chat:
         options:
           model: gpt-5.2
 
-
+# --------------------------------------------------
+# Application-specific AI prompt configuration
+# --------------------------------------------------
+app:
+  ai:
+    openai:
+      prompt:
+        v1:
+          ko:
+            system-default: "classpath:prompt/system/system.ko.v1.md"
