@@ -1,1 +1,13 @@
-spring.application.name=spring-ai
+ spring:
+  application:
+    name: spring-ai
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+#      anthropic: ${OPENAI_API_KEY}
+#      google: ${ANTHROPIC_API_KEY}
+      chat:
+        options:
+          model: gpt-5.2
+
+

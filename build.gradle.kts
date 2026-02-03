@@ -21,9 +21,9 @@ repositories {
 extra["springAiVersion"] = "1.0.0"
 
 dependencies {
-    /*
     // OpenAI 사용 시
     implementation("org.springframework.ai:spring-ai-starter-model-openai")
+    /*
     // Anthropic 사용 시
     implementation("org.springframework.ai:spring-ai-starter-model-anthropic")
     // Google Gemini 사용 시
