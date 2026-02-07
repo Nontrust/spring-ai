@@ -8,6 +8,12 @@ spring:
       chat:
         options:
           model: gpt-5.2
+    retry:
+      max-attempts: 3 #최대 재시도 횟수
+      backoff:
+        initial-interval: 1000 #ms 대기시간
+        max-interval: 10000 #ms 최대 대기시간
+        multiplier: 2 # 대기시간 증가 배수
 
 # --------------------------------------------------
 # Application-specific AI prompt configuration
@@ -18,4 +24,4 @@ app:
       prompt:
         v1:
           ko:
-            system-default-path: "classpath:/prompt/system/system.ko.v1.md"
+            system-default-path: "classpath:/prompt/system/system.ko.v1.md" # default prompt
