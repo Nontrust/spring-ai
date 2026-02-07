@@ -25,3 +25,8 @@ app:
         v1:
           ko:
             system-default-path: "classpath:/prompt/system/system.ko.v1.md" # default prompt
+            style-path: "classpath:/prompt/style/style.ko.v1.md" # style prompt (optional)
+
+  configure:
+    conversation:
+      max-history: 20
