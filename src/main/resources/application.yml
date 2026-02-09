@@ -22,10 +22,18 @@ app:
   ai:
     openai:
       prompt:
-        v1:
-          ko:
-            system-default-path: "classpath:/prompt/system/system.ko.v1.md" # default prompt
-            style-path: "classpath:/prompt/style/style.ko.v1.md" # style prompt (optional)
+        system-default:
+          dir: "classpath:/prompt/system/"
+          default:
+            file-name: "system.ko.v1.md"
+        style:
+          dir: "classpath:/prompt/style/"
+          templates:
+            default:
+              file-name: "default.ko.v1.md"
+            conversation:
+              file-name: "conversation.ko.v1.md"
+
 
   configure:
     conversation:

@@ -1,5 +1,6 @@
 package com.ai.spring.springai.global.property
 
+import com.ai.spring.springai.global.enum.PromptStyle
 import jakarta.validation.Valid
 import jakarta.validation.constraints.NotBlank
 import org.springframework.boot.context.properties.ConfigurationProperties
@@ -10,15 +11,29 @@ import org.springframework.validation.annotation.Validated
 class AiPromptProperties {
 
     @field:Valid
-    var v1: V1 = V1()
+    lateinit var systemDefault: SystemDefaultGroup
 
-    class V1 {
+    @field:Valid
+    lateinit var style: StyleGroup
+
+    class SystemDefaultGroup {
+        @NotBlank
+        lateinit var dir: String
+
         @field:Valid
-        var ko: Ko = Ko()
+        lateinit var default: Template
     }
 
-    class Ko {
+    class StyleGroup {
         @NotBlank
-        lateinit var systemDefaultPath: String
+        lateinit var dir: String
+
+        @field:Valid
+        lateinit var templates: Map<PromptStyle, Template>
+    }
+
+    class Template {
+        @NotBlank
+        lateinit var fileName: String
     }
 }
