@@ -4,11 +4,12 @@ import org.springframework.ai.chat.client.ChatClient
 import org.springframework.ai.chat.messages.AssistantMessage
 import org.springframework.ai.chat.messages.UserMessage
 import org.springframework.ai.openai.OpenAiChatOptions
+import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.stereotype.Service
 
 @Service
 class ChatService(
-    private val chatClient: ChatClient
+    @param:Qualifier("chatClientDefault") private val chatClient: ChatClient
 ) {
 
     /**
